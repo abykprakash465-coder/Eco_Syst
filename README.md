@@ -1,72 +1,106 @@
-# Desktop Cat
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-A local Linux desktop companion built with Python, PySide6, and QPainter. It runs a fully transparent, animated pixel tabby cat sprite that patrols real desktop folders, lands on icons, stretches, naps, and interacts with cursor movements.
 
-*Built for the Useless Projects Hackathon.*
+
+Eco_Syst 🎯
+
+
+## Basic Details
+### Team Name: Mace
+
+
+### Team Members
+- Team Lead: Aby K Prakash - Government Engineering College Kozhikode
+- Member 2: Aby K Prakash - Government Engineering College Kozhikode
+- Member 3: Amarnad K - Government Engineering College Kozhikode
+
+### Project Description
+A simple playfull cat for your Desktop
+
+### The Problem (that doesn't exist)
+Resourse management we often forgets what we try to do in our laptops and forget the files.
+
+### The Solution (that nobody asked for)
+This is just a remainder to remaind you about your project
+## Technical Details
+### Technologies/Components Used
+For Software:
+- Python
+- PySide6, and QPainter
+- Antigravity IDE
+
+For Hardware:
+- [List main components]
+- [List specifications]
+- [List tools required]
+
+### Implementation
+For Software:
+# Installation
+[commands]
+
+# Run
+[commands]
+
+### Project Documentation
+For Software: 
+
+# Screenshots (Add at least 3)
+![Screenshot1](Add screenshot 1 here with proper name)
+<img width="1920" height="1080" alt="Screenshot From 2026-09-12 06-40-08" src="https://github.com/user-attachments/assets/c8c8c6bf-7226-4eae-a327-e082a97b3c00" />
+petting
+*Add caption explaining what this shows*
+
+![Screenshot2](Add screenshot 2 here with proper name)
+<img width="1920" height="1080" alt="Screenshot From 2026-09-12 06-39-59" src="https://github.com/user-attachments/assets/083356f6-4326-4421-a337-a7493cd80902" />
+Jumping for snacks
+*Add caption explaining what this shows*
+
+![Screenshot3](Add screenshot 3 here with proper name)
+<img width="1920" height="1080" alt="Screenshot From 2026-09-12 06-38-51" src="https://github.com/user-attachments/assets/640901d6-756b-41eb-905e-0cadd5c11535" />
+inspecting your surrounding
+*Add caption explaining what this shows*
+
+# Diagrams
+![Workflow](Add your workflow/architecture diagram here)
+*Add caption explaining your workflow*
+
+For Hardware:
+
+# Schematic & Circuit
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
+
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
+
+# Build Photos
+![Components](Add photo of your components here)
+*List out all components shown*
+
+![Build](Add photos of build process here)
+*Explain the build steps*
+
+![Final](Add photo of final product here)
+*Explain the final build*
+
+### Project Demo
+# Video
+[Screencast From 2026-09-12 06-44-49.webm](https://github.com/user-attachments/assets/1c617fcc-a5b8-4108-b9dd-1773cf17f960)
+Screencast
+[Add your demo video link here]
+
+*Explain what the video demonstrates*
+
+# Additional Demos
+[Add any extra demo materials/links]
+
+## Team Contributions
+- Aby K Prakash: Programming and planning
+- Amarnad K: Programming and planning
 
 ---
+Made with ❤️ at TinkerHub Useless Projects 
 
-## Quick Start
-
-```bash
-cd /home/aby/interactive
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-python desktop_cat.py
-```
-
-### Controls & System Tray
-
-- **System Tray Icon (🐾)**: Look for the cat icon in your system tray to access:
-  - **Mood Override**: Switch between Auto (Battery / AC), Spicy, Sleepy, and Drowsy.
-  - **Feed Treat**: Drops a fish treat for the cat.
-  - **Rescan Desktop Items**: Refreshes desktop icons without restarting.
-  - **Reset Position**: Teleports the cat back to the screen center.
-  - **Quit**: Cleanly exits the application.
-- **Interactive Hotkeys**:
-  - `Ctrl` (Hold): Activates the **laser pointer** (cat chases the red laser dot).
-  - `Ctrl + Shift`: Drops a **fish snack 🐟** where your mouse is pointing.
-  - **Mouse Petting**: Move your mouse cursor rapidly back and forth across the cat to pet it (emits hearts and purrs ♥).
-- **Terminal Exit**: You can also run `./lov` from the terminal to stop the cat anytime.
-
----
-
-## Features
-
-- **Desktop Folder Patrol**: Automatically discovers real items in `~/Desktop` in the background (using GNOME `gio` metadata) and leaps between icons and platforms without UI freezes.
-- **Oldest File Resting**: After 60 seconds of patrol, seeks out the least recently accessed desktop file to rest and take a cozy nap.
-- **Cursor Proximity Interaction (150px)**:
-  - **Spicy Mood**: Actively stalks and pounces towards the cursor when within 150px!
-  - **Sleepy / Drowsy Mood**: Stops and curiously watches your cursor movements.
-- **Power & Mood System**:
-  - **Unplugged (< 30% battery)**: *Passive / Sleepy* — moves slowly (0.65x speed), takes frequent long naps, gentle hops, and asks for a charger.
-  - **Unplugged (≥ 30% battery)**: *Spicy / Aggressive* — runs with the zoomies (1.45x speed), high leaps, aggressive cursor pouncing.
-  - **AC Connected / Desktop PC**: *Cozy / Drowsy* — relaxed strolls, stretches, and napping on desktop files.
-  - *Override anytime via the System Tray menu!*
-- **100% Transparent & Click-Through**: Runs as a frameless, transparent overlay with complete click-through support so your workflow is never interrupted.
-
----
-
-## Custom Sprite Sheets & CLI Options
-
-The application automatically loads the built-in tabby cat character sprite sheet from `assets/tabby_cat_spritesheet.png` (160x160 frames, 4 columns, 5 rows).
-
-Custom sprite sheets and manual platforms can be supplied via CLI flags:
-
-```bash
-python desktop_cat.py --sprite-sheet /path/to/custom_sheet.png \
-  --frame-width 160 --frame-height 160 --columns 4 --rows 5 --scale 0.72
-```
-
-Jumpable custom platform rectangles (x, y, width, height) can also be supplied:
-
-```bash
-python desktop_cat.py --platform 400,620,320,40 --platform 900,420,240,24
-```
-
----
-
-## Desktop Compositor Notes
-
-Qt requests transparent, frameless, topmost, and click-through behavior. On X11, window managers generally honor all hints. On Wayland, compositors intentionally restrict arbitrary global stacking and global input tracking for security; running under XWayland ensures global cursor tracking and hotkey modifier polling function properly.
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
